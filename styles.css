@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Variáveis */
+:root {
+  --corprincipal: #182e59;
+  --cordetalhe: #f1af09;
+  --corsecundaria: #8c3027;
+  --corsombra: #0c162b;
+  --letras: white;
+}
+
+/* Estilos do Header */
+header {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1% 5%;
+  backdrop-filter: blur(7px);
+  transition: 0.5s;
+}
+
+.nav-item a {
+  text-decoration: none;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-item a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--cordetalhe);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s;
+}
+
+.nav-item a:hover {
+  color: #ff8800;
+}
+
+.nav-item a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+#navbar ul li {
+  display: inline-block;
+  padding: 0 30px;
+}
+
+#navbar ul li a:hover {
+  color: var(--cordetalhe);
+}
+
+#blur-header.blur {
+  backdrop-filter: blur(7px);
+}
+
+/* Estilos do Body */
+body {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 22px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-color: var(--corprincipal);
+  color: var(--letras);
+}
+
+#inicio {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  line-height: 90px;
+}
+
+h1 {
+  text-shadow: 05px 05px 10px var(--corsombra);
+  font-size: 80px;
+}
+
+#str1,
+#str2 {
+  display: block;
+  font-size: 100px;
+}
+
+#str2 {
+  font-size: 40px;
+}
+
+#pedro {
+  box-shadow: var(--corsombra) 10px 10px 25px;
+  display: inline;
+  margin-top: 60px;
+  border-radius: 10px;
+}
+
+.titulo {
+  text-align: center;
+  padding-top: 60px;
+}
+
+.box-section {
+  display: inline-block;
+  padding: 60px 530px 300px 100px;
+  text-indent: 2rem;
+}
+
+p {
+  text-align: justify;
+}
+
+section {
+  height: 100vh;
+}
+
+.logos {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.titulo-projetos {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.projetos {
+  display: flex;
+  border-radius: 10px;
+  justify-content: space-evenly;
+}
+
+.img-projetos {
+  height: 200px;
+  margin-top: 10px;
+}
+
+.imagem-container {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.imagem-container img {
+  width: 200px;
+  height: auto;
+}
+
+.imagem-container:hover {
+  transform: scale(1.1);
+}
+
+#contatos {
+  padding: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.informacoes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 60px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.midia {
+  width: 50px;
+}
+
+#dedo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  display: none;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+#dedo:hover {
+  cursor: pointer;
+}
+
+#dedo img {
+  height: 100px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  background-color: var(--corsecundaria);
+}
+
+#ph:hover {
+  color: var(--cordetalhe);
+}
+
+@media (max-width: 450px) {
+  /* HEADER--------------- */
+
+  header {
+    padding: 0px;
+  }
+
+  #navbar ul li {
+    padding: 10px;
+  }
+
+  /*-------------------------------*/
+
+  #pedro {
+    width: 150px;
+    margin-top: 0px;
+  }
+
+  #inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: normal;
+    height: 100vh;
+  }
+
+  #str1 {
+    font-size: 50px;
+  }
+
+  #str2 {
+    font-size: 25px;
+  }
+
+  section {
+    height: 100vh;
+  }
+
+  h1 {
+    padding-top: 0px;
+    font-size: 35px;
+    margin-left: 10px;
+  }
+
+  .box-section {
+    padding: 0px;
+  }
+
+  .titulo {
+    margin: 0px;
+  }
+
+  .paragrafo-sobre {
+    margin: 0px 15px;
+  }
+
+  .projetos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .titulo-projetos {
+    margin: 0px;
+  }
+
+  .img-projetos {
+    margin: 0px;
+    height: 150px;
+    border-radius: 10px;
+  }
+
+  .informacoes {
+    font-size: 50px;
+  }
+
+  .midia {
+    width: 40px;
+  }
+}
