@@ -4,6 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 /* Variáveis */
@@ -74,7 +75,6 @@ body {
   font-family: "Bebas Neue", sans-serif;
   font-size: 22px;
   overflow-x: hidden;
-  scroll-behavior: smooth;
   background-color: var(--corprincipal);
   color: var(--letras);
 }
